@@ -1,5 +1,8 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { DashboardLayout } from "@/components/layout/DashboardLayout";
+import { AlertCircleIcon } from "lucide-react";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,15 +15,22 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+    <DashboardLayout>
+      <div className="flex items-center justify-center h-[80vh]">
+        <div className="text-center max-w-md">
+          <div className="bg-muted p-6 rounded-full inline-block mb-6">
+            <AlertCircleIcon className="h-12 w-12 text-muted-foreground" />
+          </div>
+          <h1 className="text-4xl font-bold mb-4">404</h1>
+          <p className="text-xl text-muted-foreground mb-6">
+            The water source you're looking for couldn't be found
+          </p>
+          <Button asChild>
+            <Link to="/">Return to Dashboard</Link>
+          </Button>
+        </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 
