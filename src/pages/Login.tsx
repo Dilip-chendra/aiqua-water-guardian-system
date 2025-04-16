@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { DropletIcon, Github, Google, Info, Lock, Mail, EyeIcon, EyeOffIcon } from "lucide-react";
+import { DropletIcon, Github, Info, Lock, Mail, EyeIcon, EyeOffIcon } from "lucide-react";
 import { toast } from "sonner";
 
 const LoginPage = () => {
@@ -287,7 +286,7 @@ const LoginPage = () => {
             
             <div className="mt-4 grid grid-cols-2 gap-3">
               <Button variant="outline" className="w-full">
-                <Google className="mr-2 h-4 w-4" />
+                <span className="mr-2">G</span>
                 Google
               </Button>
               <Button variant="outline" className="w-full">

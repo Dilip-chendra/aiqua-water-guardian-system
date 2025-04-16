@@ -27,7 +27,7 @@ import {
   FlaskConical, 
   Gauge, 
   LineChart as LineChartIcon,
-  Refresh, 
+  RefreshCw, 
   Save, 
   ShieldAlert, 
   Sliders, 
@@ -234,7 +234,7 @@ const Predictions = () => {
               <span>Export</span>
             </Button>
             <Button variant="outline" size="icon">
-              <Refresh className="h-4 w-4" />
+              <RefreshCw className="h-4 w-4" />
             </Button>
           </div>
         </div>
