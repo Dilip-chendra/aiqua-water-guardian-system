@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,8 +7,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { DashboardLayout } from "@/components/layout/DashboardLayout";
+import MapView from "./pages/MapView";
+import Analytics from "./pages/Analytics";
+import Chat from "./pages/Chat";
+import Alerts from "./pages/Alerts";
+import Predictions from "./pages/Predictions";
+import LoginPage from "./pages/Login";
 
-// Placeholder components for routes
+// Placeholder components for routes that haven't been implemented yet
 const PlaceholderPage = ({ title }: { title: string }) => (
   <DashboardLayout>
     <div className="flex flex-col gap-6">
@@ -29,11 +36,6 @@ const PlaceholderPage = ({ title }: { title: string }) => (
   </DashboardLayout>
 );
 
-const Analytics = () => <PlaceholderPage title="Analytics" />;
-const MapView = () => <PlaceholderPage title="Map View" />;
-const Chat = () => <PlaceholderPage title="AI Assistant" />;
-const Alerts = () => <PlaceholderPage title="Alerts" />;
-const Predictions = () => <PlaceholderPage title="Predictions" />;
 const Settings = () => <PlaceholderPage title="Settings" />;
 const About = () => <PlaceholderPage title="About AIQUA" />;
 
@@ -54,6 +56,7 @@ const App = () => (
           <Route path="/predictions" element={<Predictions />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
